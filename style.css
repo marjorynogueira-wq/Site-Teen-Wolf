@@ -1,0 +1,207 @@
+:root {
+ --cor-principal: #0077c9;
+ --cor-secundaria: #004d80;
+ --cor-fundo: #0a0a0a;
+ --cor-texto: #f0f0f0;
+ --cor-destaque: #ffffff;
+ --fonte-gotica: 'Cinzel', serif;
+ --fonte-corpo: 'Montserrat', sans-serif;
+}
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+body {
+ font-family: var(--fonte-corpo);
+ background-color: var(--cor-fundo);
+ color: var(--cor-texto);
+ line-height: 1.6;
+}
+.container {
+ width: 90%;
+ max-width: 1200px;
+ margin: 0 auto;
+}
+header {
+ background-color: var(--cor-fundo);
+ color: var(--cor-destaque);
+   padding: 20px 0;
+ border-bottom: 3px solid var(--cor-principal);
+ position: sticky;
+ top: 0;
+ z-index: 1000;
+}
+header .container {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+header h1 {
+ font-family: var(--fonte-gotica);
+ font-size: 2em;
+ color: var(--cor-principal);
+ text-shadow: 0 0 10px rgba(0, 119, 201, 0.7);
+}
+nav ul {
+ list-style: none;
+ display: flex;
+}
+nav ul li a {
+ color: var(--cor-texto);
+ text-decoration: none;
+ padding: 10px 15px;
+ margin-left: 10px;
+ transition: color 0.3s, background-color 0.3s;
+ border-radius: 5px;
+}
+nav ul li a:hover {
+ color: var(--cor-fundo);
+ background-color: var(--cor-principal);
+ text-shadow: none;
+}
+section {
+ padding: 60px 0;
+   margin-bottom: 20px;
+}
+section h2 {
+ font-family: var(--fonte-gotica);
+ font-size: 2.5em;
+ color: var(--cor-principal);
+ text-align: center;
+ margin-bottom: 40px;
+}
+.intro-section {
+ text-align: center;
+ background-color: #1a1a1a;
+ padding: 40px;
+ border-radius: 10px;
+ border: 1px solid var(--cor-secundaria);
+}
+.intro-section p {
+ font-size: 1.1em;
+ max-width: 800px;
+ margin: 20px auto;
+}
+hr {
+ border: 0;
+ height: 1px;
+ background-image: linear-gradient(to right, var(--cor-fundo),
+var(--cor-principal), var(--cor-fundo));
+ margin: 40px 0;
+}
+.card-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 30px;
+}
+.personagem-card {
+ background-color: #151515;
+ padding: 20px;
+   border-radius: 8px;
+ border: 2px solid var(--cor-secundaria);
+ box-shadow: 0 4px 15px rgba(0, 119, 201, 0.2);
+ transition: transform 0.3s, border-color 0.3s;
+ text-align: center;
+}
+.personagem-card:hover {
+ transform: translateY(-5px);
+ border-color: var(--cor-principal);
+}
+.personagem-foto {
+ width: 100%;
+ height: 200px;
+ object-fit: cover;
+ border-radius: 5px;
+ margin-bottom: 15px;
+ border: 1px solid var(--cor-principal);
+}
+.personagem-card h3 {
+ font-family: var(--fonte-gotica);
+ color: var(--cor-destaque);
+ margin-bottom: 10px;
+}
+.detalhe-titulo {
+ font-weight: bold;
+ color: var(--cor-principal);
+ margin-top: 10px;
+}
+#quiz-container {
+ padding: 20px;
+ background-color: #151515;
+ border-radius: 8px;
+ border: 1px solid var(--cor-secundaria);
+ margin-bottom: 20px;
+}
+.question {
+  margin-bottom: 25px;
+ padding: 15px;
+ border-bottom: 1px dashed var(--cor-secundaria);
+}
+.question p {
+ font-size: 1.2em;
+ font-weight: 700;
+ color: var(--cor-destaque);
+ margin-bottom: 10px;
+}
+.answer-option label {
+ display: block;
+ cursor: pointer;
+ padding: 8px;
+ margin-bottom: 5px;
+ transition: background-color 0.2s;
+ border-radius: 4px;
+}
+.answer-option label:hover {
+ background-color: #2a2a2a;
+}
+input[type="radio"]:checked + label {
+ background-color: var(--cor-secundaria);
+ color: var(--cor-destaque);
+}
+#submit-quiz {
+ display: block;
+ width: 100%;
+ padding: 15px;
+ background-color: var(--cor-principal);
+ color: var(--cor-fundo);
+ font-size: 1.2em;
+ font-weight: bold;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+ transition: background-color 0.3s, transform 0.1s;
+#submit-quiz:hover {
+ background-color: var(--cor-destaque);
+ color: var(--cor-principal);
+}
+#results {
+ margin-top: 30px;
+ padding: 20px;
+ border: 2px solid var(--cor-principal);
+ border-radius: 8px;
+ background-color: #1a1a1a;
+ font-size: 1.2em;
+ text-align: center;
+}
+footer {
+ background-color: var(--cor-fundo);
+ color: var(--cor-secundaria);
+ text-align: center;
+ padding: 20px 0;
+ border-top: 1px dashed var(--cor-secundaria);
+}
+@media (max-width: 768px) {
+ header .container {
+ flex-direction: column;
+ text-align: center;
+ }
+ nav ul {
+ flex-direction: column;
+ margin-top: 10px;
+ }
+ nav ul li a {
+ display: block;
+ margin: 5px 0;
+ }
+}
